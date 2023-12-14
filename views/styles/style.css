@@ -157,7 +157,7 @@ body {
   }
 
   .main-footer{
-   
+    position: fixed;
     background-color: #212529;
     left: 0;
     bottom: 0;
