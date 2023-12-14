@@ -170,17 +170,18 @@ body {
   }
 
 
-  .main-footer{
+  /*.main-footer{
     background-color: #212529;
     left: 0;
     bottom: 0;
+    padding: 0px;
     position: relative;
     width: 100%;
     text-align: center;
     padding: 10px;
     z-index: 9999;
     margin-top: 50px;
-  }
+  }*/
 
 
    
