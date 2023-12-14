@@ -8,6 +8,10 @@ body {
   min-height: 100vh;
 }
 
+  .main-css{
+    min-height: 100vh; 
+    margin-bottom: -100px;
+  }
 
 
   #menu {
