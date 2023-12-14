@@ -156,6 +156,12 @@ body {
     margin-right: 20px;
   }
 
+
+ .footer-div {
+    buttom: 0;
+  }
+
+
   .main-footer{
     background-color: #212529;
     left: 0;
@@ -166,8 +172,8 @@ body {
     padding: 10px;
     z-index: 9999;
     margin-top: 50px;
-    
   }
+
 
   .add-post-div{
     margin-bottom: 20px;
