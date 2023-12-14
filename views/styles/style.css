@@ -180,6 +180,11 @@ body {
     padding: 10px;
     z-index: 9999;
     margin-top: 50px;
+    
+    display: block;
+    height: 0;
+    clear: both;
+    visibility: hidden;
   }
 
 
