@@ -157,17 +157,6 @@ body {
   }
 
 
- /*.footer-div {
-    margin: 0;
-    position: absolute;
-    left: 0;
-    buttom: 0;
-    width: 100%;
-    text-align: center;
-    padding: 10px;
-    z-index: 9999;
-    margin-top: 50px;
-  }*/
 
   .push{
     height: 100px;
@@ -175,13 +164,13 @@ body {
   .main-footer{
     background-color: #212529;
     left: 0;
-    bottom: 0;
-    position: absolute;
+    //bottom: 0;
+    //position: absolute;
     width: 100%;
     text-align: center;
-    padding: 10px;
-    z-index: 9999;
-    margin-top: 50px;   
+    //padding: 10px;
+    //z-index: 9999;
+    //margin-top: 50px;   
   }
 
 
