@@ -1,0 +1,87 @@
+<%- include('./partials/header.ejs') %> <%- include('./partials/nav.ejs') %>
+
+  
+
+<link rel="stylesheet" href="/styles/style.css">
+<div class="info1" style="max-width: 520px; margin: 0 auto; margin-top: 20px;">
+  <% if(posts.length) { %>
+  <div>
+    <h1 ><%=title%></h1>
+    <p>
+      На цій сторінці знаходяться усі пости створені користувачами. Також тут ви можете редагувати та видаляти їх.
+    </p>
+
+
+
+    <% if(posts.length) {%> <%posts.forEach((post) => { %>
+        <div id="id_<%= post._id %>" style=" margin-top: 40px;" class="card">
+          
+            <div class="card-body" >
+                <h4><%= post.title %></h4>
+                <p><%= post.description %></p>
+                <div class="user">
+                    <img src="https://images.pexels.com/photos/19443447/pexels-photo-19443447.png?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+                        alt="user" />
+                    <div class="user-info">                        
+                        <h5><%= post.author %></h5>
+                        <small><%= post.updatedAt.toLocaleString() %></small>
+                    </div>
+                    <div class="postButton" style="text-align: right;">
+                        <a class="btn btn-primary" href="/edit-post/<%= post._id %>">Редагувати</a>
+                        <a class="confirmDeletion btn btn-primary" href="" data-id="<%= post._id %>">Видалити</a>
+ 
+                    </div>
+                </div>
+            </div>
+        
+            
+        </div>
+        <% })}; %>
+        
+        
+        
+
+        
+  </div>
+  <%} 
+  else{%>
+  <h1>Тут немає жодного поста:(</h1>
+
+  <div style="margin-top: 20px; " class="btn btn-primary btn-lg btn-block"><a style="color: white; text-decoration: none;" href="/add-post">Створити новий пост</a></div>
+  <%}%>
+</div>
+
+<div style="margin-bottom: 150px;">
+
+
+</div>
+
+<script>
+  document.addEventListener("click", (e) => {
+    const id = e.target?.dataset?.id || null;
+    if (id) {
+      fetch(`/posts/${id}`, {
+        method: "DELETE",
+      }).then(() => {
+        window.location.reload();
+      });
+    }
+  });
+</script>
+
+
+
+<% if(posts.length < 3 ) { %> 
+  
+  <div>
+    <%- include('./partials/footer.ejs') %>
+    </div>
+
+  <% } 
+  else {%>
+    
+    <div  style="position: sticky;">
+      <%- include('./partials/footer.ejs') %>
+      </div>
+    
+    <%} %>
