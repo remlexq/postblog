@@ -169,7 +169,9 @@ body {
     margin-top: 50px;
   }*/
 
-
+  .main-footer, .push{
+    height: 100px;
+  }
   .main-footer{
     background-color: #212529;
     left: 0;
