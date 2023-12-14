@@ -1,3 +1,5 @@
+<div class="main-css">
+
 <%- include('./partials/header.ejs') %> <%- include('./partials/nav.ejs') %>
 
   
@@ -55,7 +57,8 @@
 
 
 </div>
-
+<div class="push"></div>
+</div>
 <script>
   document.addEventListener("click", (e) => {
     const id = e.target?.dataset?.id || null;
@@ -69,19 +72,7 @@
   });
 </script>
 
-
-
-<% if(posts.length < 3 ) { %> 
-  
  <div class="footer-div"> 
 <%- include('./partials/footer.ejs') %>
 </div>
 
-  <% } 
-  else {%>
-    
-    <div  style="position: sticky;">
-      <%- include('./partials/footer.ejs') %>
-      </div>
-    
-    <%} %>
